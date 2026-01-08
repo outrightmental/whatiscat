@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+  <h2>{{ .Title }}</h2>
+  {{ if .Params.topics }}
+  <div class="post-meta">
+    Topics: 
+    {{ range .Params.topics }}
+      <a href="{{ "/topics/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ if ne . (index $.Params.topics (sub (len $.Params.topics) 1)) }}, {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ .Content }}
+</article>
+{{ end }}
