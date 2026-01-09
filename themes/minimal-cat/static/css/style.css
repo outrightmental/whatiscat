@@ -17,11 +17,6 @@
   /* Typography */
   --font-display: 'Righteous', sans-serif;
   --font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  
-  /* Neon glow effects */
-  --glow-pink: 0 0 10px var(--color-hot-pink), 0 0 20px var(--color-hot-pink), 0 0 30px var(--color-hot-pink);
-  --glow-teal: 0 0 10px var(--color-teal), 0 0 20px var(--color-teal);
-  --glow-orange: 0 0 10px var(--color-neon-orange), 0 0 20px var(--color-neon-orange);
 }
 
 * {
@@ -83,18 +78,7 @@ body::after {
   to { transform: rotate(360deg); }
 }
 
-@keyframes neon-flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: var(--glow-pink);
-    opacity: 1;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-    opacity: 0.8;
-  }
-}
-
-/* Header - Neon sign style with retro-futuristic flair */
+/* Header - Embossed retro-futuristic style */
 header {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
