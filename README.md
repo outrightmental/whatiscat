@@ -16,7 +16,7 @@ This website provides essential knowledge about how cats work, why they do what 
 
 ## Visit the Site
 
-The site is deployed at: **https://outrightmental.github.io/whatiscat/**
+The site is deployed at: **https://whatiscat.outright.io/**
 
 ## Local Development
 
