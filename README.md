@@ -1,3 +1,5 @@
+[![Deploy Hugo site to Pages](https://github.com/outrightmental/whatiscat/actions/workflows/hugo.yml/badge.svg)](https://github.com/outrightmental/whatiscat/actions/workflows/hugo.yml)
+
 # What is Cat?
 
 **A quick bootstrap for a human to understand a cat**
