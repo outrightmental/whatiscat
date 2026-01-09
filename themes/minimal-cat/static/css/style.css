@@ -15,8 +15,8 @@
   --color-pastel-teal: #A8E6CF;
   
   /* Typography */
-  --font-display: 'Righteous', sans-serif;
-  --font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Arvo', serif;
+  --font-body: 'Lora', Georgia, serif;
 }
 
 * {
@@ -149,23 +149,24 @@ header > p {
 
 h2 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  color: var(--color-neon-orange);
+  color: var(--color-teal);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   position: relative;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 h2::before {
   content: '▶';
   position: absolute;
-  left: -10px;
+  left: 0;
+  font-size: 0.7rem;
   color: var(--color-teal);
-  animation: pulse 2s ease-in-out infinite;
+  opacity: 0.6;
 }
 
 @keyframes pulse {
@@ -175,8 +176,8 @@ h2::before {
 
 h3 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--color-teal);
