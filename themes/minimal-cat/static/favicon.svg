@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background circle with googie gradient -->
+  <circle cx="32" cy="32" r="30" fill="#F5F2E7"/>
+  <circle cx="32" cy="32" r="28" fill="url(#googieGradient)"/>
+  
+  <defs>
+    <linearGradient id="googieGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#20B2AA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF6F00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF3ECC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Stylized cat face in white/cream -->
+  <!-- Cat ears (triangular, googie style) -->
+  <path d="M 18 20 L 12 10 L 24 16 Z" fill="#F5F2E7" stroke="#2C2C2C" stroke-width="1.5"/>
+  <path d="M 46 20 L 52 10 L 40 16 Z" fill="#F5F2E7" stroke="#2C2C2C" stroke-width="1.5"/>
+  
+  <!-- Inner ear triangles in neon colors -->
+  <path d="M 18 20 L 15 14 L 21 17 Z" fill="#FF3ECC" opacity="0.7"/>
+  <path d="M 46 20 L 49 14 L 43 17 Z" fill="#FFD300" opacity="0.7"/>
+  
+  <!-- Cat head (circular, slightly squished) -->
+  <ellipse cx="32" cy="34" rx="18" ry="16" fill="#F5F2E7" stroke="#2C2C2C" stroke-width="2"/>
+  
+  <!-- Eyes (retro googie style - slanted ovals) -->
+  <ellipse cx="25" cy="32" rx="3.5" ry="5" fill="#2C2C2C" transform="rotate(-15 25 32)"/>
+  <ellipse cx="39" cy="32" rx="3.5" ry="5" fill="#2C2C2C" transform="rotate(15 39 32)"/>
+  
+  <!-- Eye highlights (googie starburst) -->
+  <circle cx="24" cy="30" r="1.2" fill="#20B2AA"/>
+  <circle cx="38" cy="30" r="1.2" fill="#20B2AA"/>
+  
+  <!-- Nose (small triangle) -->
+  <path d="M 32 36 L 29 39 L 35 39 Z" fill="#FF6F00"/>
+  
+  <!-- Whisker dots -->
+  <circle cx="20" cy="38" r="1" fill="#2C2C2C"/>
+  <circle cx="44" cy="38" r="1" fill="#2C2C2C"/>
+  <circle cx="18" cy="36" r="1" fill="#2C2C2C"/>
+  <circle cx="46" cy="36" r="1" fill="#2C2C2C"/>
+  
+  <!-- Mouth (simple smile, googie curve) -->
+  <path d="M 29 39 Q 32 42 35 39" stroke="#2C2C2C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Decorative googie star on forehead -->
+  <text x="32" y="28" font-size="6" fill="#FF3ECC" text-anchor="middle" font-family="Arial" opacity="0.8">✦</text>
+</svg>
