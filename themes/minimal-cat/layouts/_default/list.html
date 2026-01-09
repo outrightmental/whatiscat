@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+{{ .Content }}
+<ul class="post-list">
+{{ range .Pages }}
+  <li>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    {{ if .Params.description }}
+    <p>{{ .Params.description }}</p>
+    {{ else }}
+    <p>{{ .Summary }}</p>
+    {{ end }}
+  </li>
+{{ end }}
+</ul>
+{{ end }}

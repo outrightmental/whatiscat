@@ -1,0 +1,5 @@
+name = "Minimal Cat"
+license = "MIT"
+description = "A minimal, austere theme for What is Cat?"
+homepage = "https://github.com/outrightmental/whatiscat"
+min_version = "0.139.0"

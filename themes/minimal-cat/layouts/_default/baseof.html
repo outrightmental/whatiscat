@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <header>
+    <h1><a href="{{ .Site.BaseURL }}" class="site-title-link">{{ .Site.Title }}</a></h1>
+    <p>{{ .Site.Params.description }}</p>
+    {{ partial "nav.html" . }}
+  </header>
+  <main class="content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    <p>&copy; 2026 What is Cat? A highly optimized chaos-powered guide.</p>
+  </footer>
+</body>
+</html>

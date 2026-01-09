@@ -1,0 +1,30 @@
+baseURL = 'https://outrightmental.github.io/whatiscat/'
+languageCode = 'en-us'
+title = 'What is Cat?'
+theme = 'minimal-cat'
+
+[params]
+  description = 'A quick bootstrap for a human to understand a cat'
+  author = 'What is Cat?'
+
+[taxonomies]
+  category = 'categories'
+  topic = 'topics'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'How Cats Work'
+    url = '/topics/how-cats-work/'
+    weight = 2
+  [[menu.main]]
+    name = 'Behavior'
+    url = '/topics/behavior/'
+    weight = 3
+  [[menu.main]]
+    name = 'Communication'
+    url = '/topics/communication/'
+    weight = 4
