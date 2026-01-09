@@ -883,3 +883,29 @@ footer p {
 .cat-fact-overlay.show {
   display: block;
 }
+
+/* Outright Mental Credit */
+.outright-mental-credit {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.outright-mental-link {
+  text-decoration: none;
+  color: var(--color-eggshell);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.outright-mental-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.outright-mental-link::after {
+  display: none; /* Disable the gradient underline animation from base link styles */
+}
