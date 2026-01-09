@@ -1,9 +1,9 @@
 {{ define "main" }}
-<div style="position: relative;">
-  <div style="text-align: center; margin-bottom: 2rem;">
-    <span style="font-size: 3rem; opacity: 0.3; color: var(--color-teal);">✦</span>
-    <span style="font-size: 2rem; opacity: 0.4; color: var(--color-hot-pink); margin: 0 1rem;">◆</span>
-    <span style="font-size: 3rem; opacity: 0.3; color: var(--color-neon-orange);">✦</span>
+<div>
+  <div class="decorative-header">
+    <span class="decorative-star">✦</span>
+    <span class="decorative-diamond">◆</span>
+    <span class="decorative-star-orange">✦</span>
   </div>
   
   <h2>{{ .Title }}</h2>
@@ -22,8 +22,8 @@
   {{ end }}
   </ul>
   
-  <div style="text-align: center; margin-top: 3rem; opacity: 0.5;">
-    <span style="font-size: 2rem; color: var(--color-neon-orange); animation: pulse 2s ease-in-out infinite;">★</span>
+  <div style="text-align: center; margin-top: 3rem;">
+    <span class="decorative-footer-star">★</span>
   </div>
 </div>
 {{ end }}

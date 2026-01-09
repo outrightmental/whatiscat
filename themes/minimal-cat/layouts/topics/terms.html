@@ -1,15 +1,15 @@
 {{ define "main" }}
-<div style="position: relative;">
-  <div style="text-align: center; margin-bottom: 2rem;">
-    <span style="font-size: 3rem; opacity: 0.3; color: var(--color-hot-pink);">★</span>
-    <span style="font-size: 2rem; opacity: 0.4; color: var(--color-teal); margin: 0 1rem;">◆</span>
-    <span style="font-size: 3rem; opacity: 0.3; color: var(--color-neon-yellow);">★</span>
+<div>
+  <div class="decorative-header">
+    <span class="decorative-star" style="color: var(--color-hot-pink);">★</span>
+    <span class="decorative-diamond">◆</span>
+    <span class="decorative-star-yellow">★</span>
   </div>
   
   <h2>{{ .Title }}</h2>
   
-  <div style="background: linear-gradient(135deg, rgba(255, 62, 204, 0.1), rgba(32, 178, 170, 0.1)); padding: 1.5rem; border-radius: 15px; margin: 2rem 0; border: 2px solid var(--color-pastel-pink);">
-    <p style="margin: 0; font-style: italic; color: var(--color-navy);">
+  <div class="info-box">
+    <p>
       Explore our collection of absurdly informative cat knowledge, organized for your convenience by our team of highly trained feline researchers.
     </p>
   </div>

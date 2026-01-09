@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
   <header>
@@ -30,7 +31,15 @@
         title.style.animation = 'neon-flicker 2s ease-in-out';
       }
       
-      // Add Easter egg: Random cat fact on specific element click
+      // Easter egg: 5-click reveals absurd cat facts
+      const CAT_FACTS = [
+        'Fact: Cats invented the internet in 1986! (Citation needed)',
+        'Fact: A cat\'s purr vibrates at the exact frequency of universal truth.',
+        'Fact: Cats can see in 17 dimensions, they just choose not to mention it.',
+        'Fact: Every box is a portal to the Cat Dimension. This is not a joke.',
+        'Fact: Cats domesticated humans as a long-term art project.'
+      ];
+      
       const header = document.querySelector('header');
       let clickCount = 0;
       if (header) {
@@ -38,14 +47,7 @@
           if (e.target.tagName === 'H1' || e.target.classList.contains('site-title-link')) {
             clickCount++;
             if (clickCount === 5) {
-              const facts = [
-                'Fact: Cats invented the internet in 1986! (Citation needed)',
-                'Fact: A cat\'s purr vibrates at the exact frequency of universal truth.',
-                'Fact: Cats can see in 17 dimensions, they just choose not to mention it.',
-                'Fact: Every box is a portal to the Cat Dimension. This is not a joke.',
-                'Fact: Cats domesticated humans as a long-term art project.'
-              ];
-              const randomFact = facts[Math.floor(Math.random() * facts.length)];
+              const randomFact = CAT_FACTS[Math.floor(Math.random() * CAT_FACTS.length)];
               alert('🐱 ABSURD CAT FACT UNLOCKED 🐱\n\n' + randomFact);
               clickCount = 0;
             }

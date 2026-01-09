@@ -1,8 +1,6 @@
 /* WhatIsCat - Absurdist Googie-Style Theme */
 /* Retro-futuristic 1950s space-age design with absurdist humor */
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Space+Grotesk:wght@400;600;700&display=swap');
-
 :root {
   /* Googie Color Palette - Bright, optimistic, retro-futuristic */
   --color-eggshell: #F5F2E7;
@@ -637,4 +635,158 @@ footer p {
 @keyframes orbit {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* Decorative elements - Reusable classes */
+.decorative-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.decorative-star {
+  font-size: 3rem;
+  opacity: 0.3;
+  color: var(--color-teal);
+}
+
+.decorative-diamond {
+  font-size: 2rem;
+  opacity: 0.4;
+  color: var(--color-hot-pink);
+  margin: 0 1rem;
+}
+
+.decorative-star-orange {
+  font-size: 3rem;
+  opacity: 0.3;
+  color: var(--color-neon-orange);
+}
+
+.decorative-star-yellow {
+  font-size: 3rem;
+  opacity: 0.3;
+  color: var(--color-neon-yellow);
+}
+
+.decorative-footer-star {
+  font-size: 2rem;
+  color: var(--color-neon-orange);
+  animation: pulse 2s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+/* Content boxes */
+.certification-box {
+  background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), rgba(255, 62, 204, 0.1));
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  border: 3px dashed var(--color-teal);
+  text-align: center;
+}
+
+.certification-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.certification-subtitle {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.info-box {
+  background: linear-gradient(135deg, rgba(255, 62, 204, 0.1), rgba(32, 178, 170, 0.1));
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  border: 2px solid var(--color-pastel-pink);
+}
+
+.info-box p {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-navy);
+}
+
+/* Article enhancements */
+.article-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-watermark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3rem;
+  opacity: 0.05;
+  color: var(--color-hot-pink);
+}
+
+.back-home-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-lime-green));
+  color: white;
+  border-radius: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(32, 178, 170, 0.3);
+}
+
+.back-home-button::after {
+  display: none;
+}
+
+.back-home-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(57, 255, 20, 0.5);
+}
+
+.topic-meta-box {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), rgba(57, 255, 20, 0.1));
+  border-radius: 10px;
+  border-left: 4px solid var(--color-teal);
+}
+
+.topic-meta-box strong {
+  color: var(--color-navy);
+}
+
+.topic-meta-box a {
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+.decorative-article-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0.4;
+}
+
+.decorative-article-star {
+  font-size: 1.5rem;
+  color: var(--color-neon-orange);
+}
+
+.decorative-article-center-star {
+  font-size: 2rem;
+  color: var(--color-hot-pink);
+  margin: 0 1rem;
+}
+
+.decorative-article-star-teal {
+  font-size: 1.5rem;
+  color: var(--color-teal);
 }
