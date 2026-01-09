@@ -892,6 +892,7 @@ footer p {
 }
 
 .outright-mental-link {
+  margin-top: 2rem;
   text-decoration: none;
   color: var(--color-eggshell);
   font-family: var(--font-display);
