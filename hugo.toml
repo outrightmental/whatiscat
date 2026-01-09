@@ -1,4 +1,4 @@
-baseURL = 'https://outrightmental.github.io/whatiscat/'
+baseURL = 'https://whatiscat.outright.io/'
 languageCode = 'en-us'
 title = 'What is Cat?'
 theme = 'minimal-cat'
