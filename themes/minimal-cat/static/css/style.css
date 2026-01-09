@@ -892,9 +892,6 @@ footer p {
 }
 
 .outright-mental-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
   color: var(--color-eggshell);
   font-family: var(--font-display);
@@ -907,28 +904,8 @@ footer p {
 .outright-mental-link:hover {
   opacity: 1;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
 }
 
 .outright-mental-link::after {
   display: none; /* Disable the gradient underline animation from base link styles */
-}
-
-.outright-mental-logo {
-  width: 32px;
-  height: 32px;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.outright-mental-link:hover .outright-mental-logo {
-  opacity: 1;
-  transform: scale(1.1) rotate(5deg);
-  filter: drop-shadow(0 4px 8px rgba(32, 178, 170, 0.5));
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .outright-mental-link:hover .outright-mental-logo {
-    transform: scale(1.1);
-  }
 }
