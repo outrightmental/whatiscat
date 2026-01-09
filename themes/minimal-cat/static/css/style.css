@@ -911,14 +911,13 @@ footer p {
 }
 
 .outright-mental-link::after {
-  display: none; /* Override the default link underline effect */
+  display: none; /* Disable the gradient underline animation from base link styles */
 }
 
 .outright-mental-logo {
   width: 32px;
   height: 32px;
   transition: all 0.3s ease;
-  opacity: 0.6;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
