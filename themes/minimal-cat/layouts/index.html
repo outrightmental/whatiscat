@@ -1,16 +1,36 @@
 {{ define "main" }}
-{{ .Content }}
-<h2>Recent Topics</h2>
-<ul class="post-list">
-{{ range .Site.RegularPages.ByWeight }}
-  <li>
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    {{ if .Params.description }}
-    <p>{{ .Params.description }}</p>
-    {{ else }}
-    <p>{{ .Summary }}</p>
-    {{ end }}
-  </li>
-{{ end }}
-</ul>
+<div style="position: relative;">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <span style="font-size: 3rem; opacity: 0.3; color: var(--color-teal);">✦</span>
+    <span style="font-size: 2rem; opacity: 0.4; color: var(--color-hot-pink); margin: 0 1rem;">◆</span>
+    <span style="font-size: 3rem; opacity: 0.3; color: var(--color-neon-orange);">✦</span>
+  </div>
+  
+  {{ .Content }}
+  
+  <div style="background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), rgba(255, 62, 204, 0.1)); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 3px dashed var(--color-teal); text-align: center;">
+    <p style="font-family: var(--font-display); font-size: 1.2rem; color: var(--color-navy); margin: 0;">
+      <strong>⚛️ OFFICIAL DOCUMENTATION ⚛️</strong><br>
+      <span style="font-size: 0.9rem; font-style: italic;">Certified by the Intergalactic Council of Feline Affairs</span>
+    </p>
+  </div>
+  
+  <h2>Recent Topics</h2>
+  <ul class="post-list">
+  {{ range .Site.RegularPages.ByWeight }}
+    <li>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ if .Params.description }}
+      <p>{{ .Params.description }}</p>
+      {{ else }}
+      <p>{{ .Summary }}</p>
+      {{ end }}
+    </li>
+  {{ end }}
+  </ul>
+  
+  <div style="text-align: center; margin-top: 3rem; opacity: 0.5;">
+    <span style="font-size: 2rem; color: var(--color-neon-orange); animation: pulse 2s ease-in-out infinite;">★</span>
+  </div>
+</div>
 {{ end }}
