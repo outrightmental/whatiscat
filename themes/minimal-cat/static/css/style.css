@@ -27,6 +27,10 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+h1 a.site-title-link {
+  color: inherit;
+}
+
 h2 {
   font-size: 1.5rem;
   font-weight: 600;

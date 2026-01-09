@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1><a href="{{ .Site.BaseURL }}" style="color: inherit;">{{ .Site.Title }}</a></h1>
+    <h1><a href="{{ .Site.BaseURL }}" class="site-title-link">{{ .Site.Title }}</a></h1>
     <p>{{ .Site.Params.description }}</p>
     {{ partial "nav.html" . }}
   </header>

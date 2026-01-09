@@ -2,7 +2,7 @@
 {{ .Content }}
 <h2>Recent Topics</h2>
 <ul class="post-list">
-{{ range (where .Site.RegularPages "Section" "content").ByWeight }}
+{{ range .Site.RegularPages.ByWeight }}
   <li>
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ if .Params.description }}
