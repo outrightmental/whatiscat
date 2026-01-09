@@ -1,16 +1,36 @@
 {{ define "main" }}
-{{ .Content }}
-<h2>Recent Topics</h2>
-<ul class="post-list">
-{{ range .Site.RegularPages.ByWeight }}
-  <li>
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    {{ if .Params.description }}
-    <p>{{ .Params.description }}</p>
-    {{ else }}
-    <p>{{ .Summary }}</p>
-    {{ end }}
-  </li>
-{{ end }}
-</ul>
+<div>
+  <div class="decorative-header">
+    <span class="decorative-star">✦</span>
+    <span class="decorative-diamond">◆</span>
+    <span class="decorative-star-orange">✦</span>
+  </div>
+  
+  {{ .Content }}
+  
+  <div class="certification-box">
+    <p class="certification-title">
+      <strong>⚛️ OFFICIAL DOCUMENTATION ⚛️</strong><br>
+      <span class="certification-subtitle">Certified by the Intergalactic Council of Feline Affairs</span>
+    </p>
+  </div>
+  
+  <h2>Recent Topics</h2>
+  <ul class="post-list">
+  {{ range .Site.RegularPages.ByWeight }}
+    <li>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ if .Params.description }}
+      <p>{{ .Params.description }}</p>
+      {{ else }}
+      <p>{{ .Summary }}</p>
+      {{ end }}
+    </li>
+  {{ end }}
+  </ul>
+  
+  <div class="decorative-footer-container">
+    <span class="decorative-footer-star">★</span>
+  </div>
+</div>
 {{ end }}

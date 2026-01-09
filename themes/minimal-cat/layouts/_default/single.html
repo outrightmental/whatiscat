@@ -1,14 +1,31 @@
 {{ define "main" }}
 <article>
+  <div class="decorative-article-header">
+    <span class="decorative-article-star">◆</span>
+    <span class="decorative-article-center-star">★</span>
+    <span class="decorative-article-star-teal">◆</span>
+  </div>
+  
   <h2>{{ .Title }}</h2>
+  
   {{ if .Params.topics }}
-  <div class="post-meta">
-    Topics: 
-    {{ range .Params.topics }}
+  <div class="topic-meta-box">
+    <strong>Topics:</strong> 
+    {{ range $index, $topic := .Params.topics }}
       <a href="{{ "/topics/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ if ne . (index $.Params.topics (sub (len $.Params.topics) 1)) }}, {{ end }}
     {{ end }}
   </div>
   {{ end }}
-  {{ .Content }}
+  
+  <div class="article-container">
+    <div class="article-watermark">✦</div>
+    {{ .Content }}
+  </div>
+  
+  <div class="decorative-footer-container">
+    <a href="{{ .Site.BaseURL }}" class="back-home-button">
+      ← Back to Home
+    </a>
+  </div>
 </article>
 {{ end }}

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
@@ -17,7 +20,91 @@
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
-    <p>&copy; 2026 What is Cat? A highly optimized chaos-powered guide.</p>
+    <p>★ Presented by the Institute of Cat Studies ★</p>
+    <p>&copy; 2026 What is Cat? • A highly optimized chaos-powered guide • Est. 10,000 BCE</p>
   </footer>
+  
+  <!-- Accessible notification for Easter egg -->
+  <div class="cat-fact-overlay" id="catFactOverlay"></div>
+  <div class="cat-fact-notification" id="catFactNotification" role="dialog" aria-labelledby="catFactTitle" aria-modal="true">
+    <h3 id="catFactTitle">🐱 ABSURD CAT FACT UNLOCKED 🐱</h3>
+    <p id="catFactText"></p>
+    <button onclick="closeCatFact()" aria-label="Close notification">Got it!</button>
+  </div>
+  
+  <script>
+    // Easter egg: 5-click reveals absurd cat facts (accessible implementation)
+    document.addEventListener('DOMContentLoaded', function() {
+      const CAT_FACTS = [
+        'Fact: Cats invented the internet in 1986! (Citation needed)',
+        'Fact: A cat\'s purr vibrates at the exact frequency of universal truth.',
+        'Fact: Cats can see in 17 dimensions, they just choose not to mention it.',
+        'Fact: Every box is a portal to the Cat Dimension. This is not a joke.',
+        'Fact: Cats domesticated humans as a long-term art project.'
+      ];
+      
+      // Attach click handler directly to the title element for precision
+      const titleLink = document.querySelector('.site-title-link');
+      let clickCount = 0;
+      
+      if (titleLink) {
+        titleLink.addEventListener('click', function(e) {
+          clickCount++;
+          if (clickCount === 5) {
+            e.preventDefault(); // Prevent navigation on 5th click
+            const randomFact = CAT_FACTS[Math.floor(Math.random() * CAT_FACTS.length)];
+            showCatFact(randomFact);
+            clickCount = 0;
+          }
+        });
+        
+        // Make it keyboard accessible
+        titleLink.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            clickCount++;
+            if (clickCount === 5) {
+              e.preventDefault();
+              const randomFact = CAT_FACTS[Math.floor(Math.random() * CAT_FACTS.length)];
+              showCatFact(randomFact);
+              clickCount = 0;
+            }
+          }
+        });
+      }
+    });
+    
+    function showCatFact(fact) {
+      const notification = document.getElementById('catFactNotification');
+      const overlay = document.getElementById('catFactOverlay');
+      const factText = document.getElementById('catFactText');
+      
+      factText.textContent = fact;
+      notification.classList.add('show');
+      overlay.classList.add('show');
+      
+      // Focus the close button for keyboard accessibility
+      setTimeout(() => {
+        notification.querySelector('button').focus();
+      }, 100);
+    }
+    
+    function closeCatFact() {
+      const notification = document.getElementById('catFactNotification');
+      const overlay = document.getElementById('catFactOverlay');
+      
+      notification.classList.remove('show');
+      overlay.classList.remove('show');
+    }
+    
+    // Close on overlay click
+    document.getElementById('catFactOverlay').addEventListener('click', closeCatFact);
+    
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeCatFact();
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,16 +1,29 @@
 {{ define "main" }}
-<h2>{{ .Title }}</h2>
-{{ .Content }}
-<ul class="post-list">
-{{ range .Pages }}
-  <li>
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    {{ if .Params.description }}
-    <p>{{ .Params.description }}</p>
-    {{ else }}
-    <p>{{ .Summary }}</p>
-    {{ end }}
-  </li>
-{{ end }}
-</ul>
+<div>
+  <div class="decorative-header">
+    <span class="decorative-star">✦</span>
+    <span class="decorative-diamond">◆</span>
+    <span class="decorative-star-orange">✦</span>
+  </div>
+  
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+  
+  <ul class="post-list">
+  {{ range .Pages }}
+    <li>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ if .Params.description }}
+      <p>{{ .Params.description }}</p>
+      {{ else }}
+      <p>{{ .Summary }}</p>
+      {{ end }}
+    </li>
+  {{ end }}
+  </ul>
+  
+  <div class="decorative-footer-container">
+    <span class="decorative-footer-star">★</span>
+  </div>
+</div>
 {{ end }}
